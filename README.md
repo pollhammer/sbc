@@ -43,7 +43,7 @@ SBC utilizes a secure split-architecture to bypass command-line execution and en
 <p align="center">
   <img src="./Screenshots/sbc_scr01.png" alt="SMT Dashboard" width="800">
   <br>
-  <i>Main Dashboard</i>
+  <i>Main Menu</i>
 </p>
 
 ---
