@@ -1,0 +1,11 @@
+<svg width="650" height="150" viewBox="0 0 580 150" xmlns="http://www.w3.org/2000/svg">
+  <rect width="100%" height="100%" fill="transparent" />
+
+  <!-- Native ASCII-Text-Elemente für den originalen Terminal-Look -->
+  <text x="10" y="30" fill="#00f0ff" style="font-family:'Courier New', monospace; font-size:14px; font-weight:bold; white-space:pre;"> ███████╗██████╗  ██████╗</text>
+  <text x="10" y="48" fill="#00f0ff" style="font-family:'Courier New', monospace; font-size:14px; font-weight:bold; white-space:pre;"> ██╔════╝██╔══██╗██╔════╝</text>
+  <text x="10" y="66" fill="#00f0ff" style="font-family:'Courier New', monospace; font-size:14px; font-weight:bold; white-space:pre;"> ███████╗██████╔╝██║     </text>
+  <text x="10" y="84" fill="#00f0ff" style="font-family:'Courier New', monospace; font-size:14px; font-weight:bold; white-space:pre;"> ╚════██║██╔══██╗██║     </text>
+  <text x="10" y="102" fill="#00f0ff" style="font-family:'Courier New', monospace; font-size:14px; font-weight:bold; white-space:pre;"> ███████║██████╔╝╚██████╗</text>
+  <text x="10" y="120" fill="#00f0ff" style="font-family:'Courier New', monospace; font-size:14px; font-weight:bold; white-space:pre;"> ╚══════╝╚═════╝  ╚═════╝</text>
+</svg>
