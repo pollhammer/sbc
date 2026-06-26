@@ -18,9 +18,9 @@ by Manuel Pollhammer (2026)
 - **🎨 ANSI Interface:** High-contrast, boxed Unicode terminal design for pristine corporate scannability.
 
 ### ✨ Core Highlights
-- **UNC Safe Pipeline:** The Batch starter handles UAC elevation and automatically maps temporary drive letters to run safely from network shares.
-- **Direct Remediation:** Cycle local system update services or execute native Microsoft staging scripts (`ChSecBootCert.ps1`) from one hub.
-- **Zero Overhead:** No heavy monitoring frameworks required—runs instantly directly out of the box.
+- **UNC Safe Pipeline:** Maps temporary drives and auto-elevates UAC to run safely from network shares.
+- **Direct Remediation:** Cycle system updates or execute native Microsoft scripts from a single hub.
+- **Zero Overhead:** No heavy frameworks required—runs instantly and completely out of the box.
 
 ---
 
@@ -40,9 +40,9 @@ SBC utilizes a secure split-architecture to bypass command-line execution and en
 
 ## 📸 Screenshots
 <p align="center">
-  <img src="./image_bd0bfd.png" alt="SBC Dashboard" width="800">
+  <img src="./Screenshots/sbc_scr01.png" alt="SMT Dashboard" width="800">
   <br>
-  <i>Main Cyber Dashboard Menu Layout</i>
+  <i>Main Dashboard</i>
 </p>
 
 ---
