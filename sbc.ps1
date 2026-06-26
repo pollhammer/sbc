@@ -200,7 +200,7 @@ function Update-ViaDirectDownload {
     [void][Console]::ReadLine()
 }
 
-# High-Tech Cyber Dashboard Menu Loop (Optimized & Precise Layout)
+# Dashboard Menu Loop (Optimized & Precise Layout)
 do {
     Show-Header
     Write-Host "${Cyan}┌── DIAGNOSTICS ───────────────────────────────────────────────────────────────────────────────────┐${Reset}"
