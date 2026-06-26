@@ -1,6 +1,7 @@
 <div align="center">
 
-<img src="./Logo.svg" width="650" alt="ASCII Logo"> <br>  
+<img src="./Logo.svg" width="650" alt="ASCII Logo">  
+
 # Secure Boot Checker <br> v1.2 - Dashboard Edition
 **Advanced UEFI certificate auditing and mitigation console for Windows** <br>
 by Manuel Pollhammer (2026)
