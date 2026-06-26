@@ -1,4 +1,4 @@
-﻿<#
+<#
 ============================================================
  SBC v1.2 – Secure Boot Checker (2026)
  GitHub: https://github.com/pollhammer/sbc
@@ -25,18 +25,31 @@ $Height = 28
 
 if ($Host.Name -eq "ConsoleHost") {
     try {
-        $BufferSize = $Host.UI.RawUI.BufferSize
-        $BufferSize.Width = $Width
-        $BufferSize.Height = 9999
-        $Host.UI.RawUI.BufferSize = $BufferSize
+        # 1. Temporarily increase buffer height to prevent vertical dimension conflicts
+        $IntBuffer = $Host.UI.RawUI.BufferSize
+        $IntBuffer.Height = 9999
+        $Host.UI.RawUI.BufferSize = $IntBuffer
 
+        # 2. Enforce target window size dimensions safely
         $WindowSize = $Host.UI.RawUI.WindowSize
         $WindowSize.Width = $Width
         $WindowSize.Height = $Height
         $Host.UI.RawUI.WindowSize = $WindowSize
+
+        # 3. Apply final buffer width now that window constraints are met
+        $FinalBuffer = $Host.UI.RawUI.BufferSize
+        $FinalBuffer.Width = $Width
+        $Host.UI.RawUI.BufferSize = $FinalBuffer
     }
-    catch {}
+    catch {
+        # Fallback to direct .NET Console subsystem commands if Host APIs fail
+        [Console]::WindowWidth = $Width
+        [Console]::WindowHeight = $Height
+        [Console]::BufferWidth = $Width
+    }
 }
+
+
 
 [Console]::OutputEncoding = [System.Text.Encoding]::UTF8
 
@@ -45,9 +58,9 @@ $isAdmin = ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIden
 if (-not $isAdmin) {
     Clear-Host
     Write-Host "${Red}┌──────────────────────────────────────────────────────────────────────────────────────────────────┐"
-    Write-Host "│ [-] ACCESS DENIED: THIS SCRIPT MUST BE RUN AS AN ADMINISTRATOR!                                  │"
-    Write-Host "│     Please relaunch your PowerShell process with elevated administrative permissions.            │"
-    Write-Host "└──────────────────────────────────────────────────────────────────────────────────────────────────┘${Reset}"
+    Write-Host "${Red}│ [-] ACCESS DENIED: THIS SCRIPT MUST BE RUN AS AN ADMINISTRATOR!                                  │"
+    Write-Host "${Red}│     Please relaunch your PowerShell process with elevated administrative permissions.            │"
+    Write-Host "${Red}└──────────────────────────────────────────────────────────────────────────────────────────────────┘${Reset}"
     Pause
     Exit
 }
